@@ -1,9 +1,19 @@
 const express = require("express");
 
 const router = express.Router();
+const users = [];
 
 router.get("/", (req, res, next) => {
   res.render("shop", { pageTitle: "Shop" });
 });
 
-module.exports = router;
+router.post("/", (req, res, next) => {
+  console.log(req.body);
+  users.push({ name: req.body.user, userId: Math.random().toString() });
+  res.redirect("/users");
+});
+
+module.exports = {
+  users: users,
+  router: router,
+};

@@ -1,0 +1,21 @@
+.main-header {
+  background-color: red;
+}
+
+.main-header__nav {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.main-header__item-list {
+  list-style: none;
+  display: flex;
+}
+
+.main-header__item {
+  padding: 1rem;
+}
+
+.main-header__item a {
+  text-decoration: none;
+}
